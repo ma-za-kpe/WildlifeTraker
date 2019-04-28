@@ -27,7 +27,7 @@ MAKU PAULINE MAZAKPE
 2. CREATE DATABASE wildlife_tracker;
 3. CREATE TABLE animals (id serial PRIMARY KEY, name VARCHAR);
 4. CREATE DATABASE wildlife_tracker_test WITH TEMPLATE wildlife_tracker;
-5. CREATE TABLE endangeredAnimals (id serial PRIMARY KEY, name varchar);
+5. CREATE TABLE sightings (id serial PRIMARY KEY, name varchar);
 6. DROP DATABASE wildlife_tracker_test;
 7. CREATE DATABASE wildlife_tracker_test WITH TEMPLATE wildlife_tracker;
 
