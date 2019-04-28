@@ -3,6 +3,8 @@ public abstract class Animal {
     public int id;
     public String name;
 
+    public int endangeredAnimalId;
+
     //CONSTANTS
     public String healthLevel;
     public String ageLevel;
@@ -29,5 +31,9 @@ public abstract class Animal {
 
     public String getAgeLevel() {
         return ageLevel;
+    }
+
+    public int getEndangeredAnimalId() {
+        return endangeredAnimalId;
     }
 }

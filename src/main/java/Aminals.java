@@ -6,7 +6,6 @@ public class Aminals extends Animal{
 
     public Aminals(String name) {
         this.name = name;
-//        this.healthLevel = h
     }
 
     @Override
