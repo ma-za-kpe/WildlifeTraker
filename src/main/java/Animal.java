@@ -22,4 +22,12 @@ public abstract class Animal {
     public String getName() {
         return name;
     }
+
+    public String getHealthLevel() {
+        return healthLevel;
+    }
+
+    public String getAgeLevel() {
+        return ageLevel;
+    }
 }
