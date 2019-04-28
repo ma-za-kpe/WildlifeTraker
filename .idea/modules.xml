@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/WildlifeTraker.iml" filepath="$PROJECT_DIR$/WildlifeTraker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/WildlifeTraker_main.iml" filepath="$PROJECT_DIR$/.idea/modules/WildlifeTraker_main.iml" group="WildlifeTraker" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/WildlifeTraker_test.iml" filepath="$PROJECT_DIR$/.idea/modules/WildlifeTraker_test.iml" group="WildlifeTraker" />
+    </modules>
+  </component>
+</project>
