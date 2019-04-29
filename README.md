@@ -35,9 +35,6 @@ MAKU PAULINE MAZAKPE
 10. ALTER TABLE animals ADD COLUMN SightingId int;
 
 ## SCREENSHOTS
-[![Screenshot-from-2019-04-20-20-57-03.png](https://i.postimg.cc/5N6pzWnZ/Screenshot-from-2019-04-20-20-57-03.png)](https://postimg.cc/crGQq2qm)
-[![Screenshot-from-2019-04-20-20-57-10.png](https://i.postimg.cc/GmvFPLYS/Screenshot-from-2019-04-20-20-57-10.png)](https://postimg.cc/PCrvTkSm)
-[![Screenshot-from-2019-04-20-20-57-21.png](https://i.postimg.cc/63pCNCPD/Screenshot-from-2019-04-20-20-57-21.png)](https://postimg.cc/SXHn6Ykr)
 
 ## Testing
 gradle test
