@@ -3,7 +3,7 @@ body, html {
 }
 .bg {
   /* The image used */
-  background-image: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full page/img(20).jpg");
+  background-image: url("b.jpg");
 
   /* Full height */
   height: 100%;
@@ -14,3 +14,26 @@ body, html {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.card-title{
+font-size: 50px;
+color: black;
+}
+
+.co{
+ opacity: 0.1;
+}
+
+.find{
+background-color: #ffffff;
+width: 80%;
+height:60px;
+}
+
+.card{
+background-color: #444444;
+}
+
+ span{
+ font-size:30px;
+ }
