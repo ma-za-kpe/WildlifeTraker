@@ -42,3 +42,18 @@ a {
   color: #78B5BC;
   font-style: bold;
 }
+
+.ADD{
+width: 100%;
+}
+
+.btn-add-animal{
+color: white;
+background-color: #78B5BC;
+}
+
+.h4{
+color: white;
+  font-style: bold;
+  font-size:30px;
+}
