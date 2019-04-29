@@ -46,6 +46,11 @@ public class EndangeredAnimal extends Animal{
         }
     }
 
+    @Override
+    public int hashCode() {
+        return super.hashCode();
+    }
+
     //save endangered animal into db
     public void save() {
         try (Connection con = DB.sql2o.open()) {

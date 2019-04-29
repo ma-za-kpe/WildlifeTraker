@@ -27,10 +27,12 @@ MAKU PAULINE MAZAKPE
 2. CREATE DATABASE wildlife_tracker;
 3. CREATE TABLE animals (id serial PRIMARY KEY, name VARCHAR);
 4. CREATE DATABASE wildlife_tracker_test WITH TEMPLATE wildlife_tracker;
-5. CREATE TABLE sightings (id serial PRIMARY KEY, name varchar);
+5. CREATE TABLE sightings (id serial PRIMARY KEY, name varchar, location varchar, animalId int);
 6. DROP DATABASE wildlife_tracker_test;
 7. CREATE DATABASE wildlife_tracker_test WITH TEMPLATE wildlife_tracker;
 8. ALTER TABLE animals ADD COLUMN type varchar;
+9.  ALTER TABLE sightings DROP COLUMN animalid;
+10. ALTER TABLE animals ADD COLUMN SightingId int;
 
 ## SCREENSHOTS
 [![Screenshot-from-2019-04-20-20-57-03.png](https://i.postimg.cc/5N6pzWnZ/Screenshot-from-2019-04-20-20-57-03.png)](https://postimg.cc/crGQq2qm)
