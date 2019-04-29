@@ -37,3 +37,8 @@ background-color: #444444;
  span{
  font-size:30px;
  }
+
+a {
+  color: #78B5BC;
+  font-style: bold;
+}
