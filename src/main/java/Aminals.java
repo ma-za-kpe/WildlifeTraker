@@ -34,9 +34,10 @@ public class Aminals extends Animal{
     //save animal into db
     public void save() {
         try (Connection con = DB.sql2o.open()) {
-            String sql = "INSERT INTO animals (name) VALUES (:name)";
+            String sql = "INSERT INTO animals (name, type) VALUES (:name, :type)";
                     this.id = (int) con.createQuery(sql, true)
                     .addParameter("name", this.name)
+                            .addParameter("type", this.type)
                     .executeUpdate()
                     .getKey();
         }
@@ -44,7 +45,7 @@ public class Aminals extends Animal{
 
     //get all animals
     public static List<Aminals> all() {
-        String sql = "SELECT * FROM animals";
+        String sql = "SELECT * FROM animals WHERE type='animal';";
         try(Connection con = DB.sql2o.open()) {
             return con.createQuery(sql).executeAndFetch(Aminals.class);
         }
