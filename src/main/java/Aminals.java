@@ -4,8 +4,11 @@ import java.util.List;
 
 public class Aminals extends Animal{
 
+    public static final String DATABASE_TYPE = "animal";
+
     public Aminals(String name) {
         this.name = name;
+        type = DATABASE_TYPE;
     }
 
     @Override

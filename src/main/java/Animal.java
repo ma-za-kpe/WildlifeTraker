@@ -9,6 +9,8 @@ public abstract class Animal {
     public String healthLevel;
     public String ageLevel;
 
+    public String type;
+
     public static final String MAX_HEALTH_LEVEL = "healthy";
     public static final String MEDIUM_HEALTH_LEVEL = "okay";
     public static final String MIN_HEALTH_LEVEL = "ill";
