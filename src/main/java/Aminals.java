@@ -5,11 +5,11 @@ import java.util.List;
 public class Aminals extends Animal{
 
     public static final String DATABASE_TYPE = "animal";
-    private int sightingsId;
+    private int sightingid;
 
     public Aminals(String name, int sightingsId) {
         this.name = name;
-        this.sightingsId = sightingsId;
+        this.sightingid = sightingsId;
         type = DATABASE_TYPE;
     }
 
@@ -24,7 +24,7 @@ public class Aminals extends Animal{
     }
 
     public int getSightingsId() {
-        return sightingsId;
+        return sightingid;
     }
 
     @Override
@@ -40,11 +40,11 @@ public class Aminals extends Animal{
     //save animal into db
     public void save() {
         try (Connection con = DB.sql2o.open()) {
-            String sql = "INSERT INTO animals (name, type, sightingid) VALUES (:name, :type, :sightingId);";
+            String sql = "INSERT INTO animals (name, type, sightingId) VALUES (:name, :type, :sightingId);";
                     this.id = (int) con.createQuery(sql, true)
                     .addParameter("name", this.name)
                             .addParameter("type", this.type)
-                             .addParameter("sightingId", this.sightingsId)
+                             .addParameter("sightingId", this.sightingid)
                     .executeUpdate()
                     .getKey();
         }
@@ -57,6 +57,7 @@ public class Aminals extends Animal{
             return con.createQuery(sql).executeAndFetch(Aminals.class);
         }
     }
+
     //find animals by id
     public static Aminals find(int id) {
         try(Connection con = DB.sql2o.open()) {
