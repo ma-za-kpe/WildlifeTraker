@@ -10,7 +10,7 @@ public class Aminals extends Animal{
     public Aminals(String name, int sightingsId) {
         this.name = name;
         this.sightingid = sightingsId;
-        type = DATABASE_TYPE;
+        this.type = DATABASE_TYPE;
     }
 
     @Override
@@ -25,6 +25,10 @@ public class Aminals extends Animal{
 
     public int getSightingsId() {
         return sightingid;
+    }
+
+    public static String getDatabaseType() {
+        return DATABASE_TYPE;
     }
 
     @Override

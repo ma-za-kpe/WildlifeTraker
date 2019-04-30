@@ -56,9 +56,10 @@ public class App {
             Sightings sightings = Sightings.find(i);
             String name = request.queryParams("name");
             Aminals newAnimal = new Aminals(name, sightings.getId());
+            newAnimal.save();
+            model.put("sightings", sightings);
             String url = String.format("/allAnimals", newAnimal.getId());
             response.redirect(url);
-            model.put("template", "templates/success.vtl");
             return new ModelAndView(model, layout);
         }, new VelocityTemplateEngine());
 

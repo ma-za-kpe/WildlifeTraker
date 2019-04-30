@@ -15,17 +15,14 @@
                 <p class="h4 mb-4">ADD ANIMAL</p>
 
                 <!-- Ranger name -->
-                <input type="name" id="name" name="name" class="form-control mb-4" placeholder="Ranger">
-
-                <!-- Animal location -->
-                <input type="location" id="location" name="location" class="form-control mb-4" placeholder="location">
+                <input type="name" id="name" name="name" class="form-control mb-4" placeholder="Name">
 
                 <!-- Animal id -->
                    <label for="sightingid" class="add-btn"><span>Select animal</span></label>
-                       <select class="browser-default custom-select" id='sightingid' name='sightingid' type='text'>
+                       <select class="browser-default custom-select" id='sightingid' name='sightingid' type='sightingid'>
                          <option selected>Animals select menu</option>
-                          #foreach($stylists in $stylists)
-                                 <option value="$stylists.getId()">$stylists.getName()</option>
+                          #foreach($sighting in $sightings)
+                                 <option value="$sighting.getId()">$sighting.getName(), $sighting.getId()</option>
                                #end
                        </select>
                 <!-- Sign in button -->
@@ -40,3 +37,5 @@
     </div>
   </div>
 </div>
+
+
