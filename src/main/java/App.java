@@ -93,6 +93,16 @@ public class App {
             return new ModelAndView(model, layout);
         }, new VelocityTemplateEngine());
 
+        //get sighting details page
+        //add sighting form
+        get("/sightingDetails/:id", (request, response) -> {
+            Map<String, Object> model = new HashMap<String, Object>();
+            Sightings sightings = Sightings.find(Integer.parseInt(request.params(":id")));
+            model.put("sightings", sightings);
+            model.put("template", "templates/sightingDetails.vtl");
+            return new ModelAndView(model, layout);
+        }, new VelocityTemplateEngine());
+
 
     }
 }

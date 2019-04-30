@@ -18,6 +18,20 @@ public class SightingsTest {
     }
 
     @Test
+    public void SightingInstantiatesWithName_true() throws Exception {
+        Sightings sightings = new Sightings("Musa", "near river");
+        assertEquals("Musa", sightings.getName());
+
+    }
+
+    @Test
+    public void SightingInstantiatesWithLocation_true() throws Exception {
+        Sightings sightings = new Sightings("Musa", "near river");
+        assertEquals("near river", sightings.getLocation());
+
+    }
+
+    @Test
     public void equals_returnsTrueIfNameAreSame_true() {
         Sightings sightings = new Sightings("Musa", "near river");
         Sightings sightings1 = new Sightings("Musa", "near river");
