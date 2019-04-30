@@ -79,8 +79,9 @@ public class App {
             String location = request.queryParams("location");
             Sightings sightings = new Sightings(name, location);
             String url = String.format("/allSightings", sightings.getId());
+            sightings.save();
+            model.put("sightings", sightings);
             response.redirect(url);
-            model.put("template", "templates/allSightings.vtl");
             return new ModelAndView(model, layout);
         }, new VelocityTemplateEngine());
 
