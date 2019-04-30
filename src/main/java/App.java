@@ -49,7 +49,6 @@ public class App {
         }, new VelocityTemplateEngine());
 
         //add animal
-        //post: process new client form
         post("/addAnimal", (request, response) -> {
             Map<String, Object> model = new HashMap<String, Object>();
 
@@ -60,6 +59,36 @@ public class App {
             String url = String.format("/allAnimals", newAnimal.getId());
             response.redirect(url);
             model.put("template", "templates/success.vtl");
+            return new ModelAndView(model, layout);
+        }, new VelocityTemplateEngine());
+
+
+        //ADD SIGHTING
+
+        //add sighting form
+        get("/addSighting", (request, response) -> {
+            Map<String, Object> model = new HashMap<String, Object>();
+            model.put("template", "templates/addSighting.vtl");
+            return new ModelAndView(model, layout);
+        }, new VelocityTemplateEngine());
+
+        //add sighting
+        post("/AddSighting", (request, response) -> {
+            Map<String, Object> model = new HashMap<String, Object>();
+            String name = request.queryParams("name");
+            String location = request.queryParams("location");
+            Sightings sightings = new Sightings(name, location);
+            String url = String.format("/allSightings", sightings.getId());
+            response.redirect(url);
+            model.put("template", "templates/allSightings.vtl");
+            return new ModelAndView(model, layout);
+        }, new VelocityTemplateEngine());
+
+        //get all sightings
+        get("/allSightings", (request, response) -> {
+            Map<String, Object> model = new HashMap<String, Object>();
+            model.put("sightings", Sightings.all());
+            model.put("template", "templates/allSightings.vtl");
             return new ModelAndView(model, layout);
         }, new VelocityTemplateEngine());
 
