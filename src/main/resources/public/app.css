@@ -81,3 +81,11 @@ background-color: #78B5BC;
  font-style: bold;
     font-size:25px;
 }
+
+
+.delete{
+ color: #444444;
+ font-style: bold;
+ font-size:25px;
+ background-color: #D64933;
+}
