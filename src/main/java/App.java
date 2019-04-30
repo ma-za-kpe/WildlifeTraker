@@ -36,6 +36,7 @@ public class App {
         //add animal form
         get("/addAnimal", (request, response) -> {
             Map<String, Object> model = new HashMap<String, Object>();
+            model.put("sightings", Sightings.all());
             model.put("template", "templates/addAnimal.vtl");
             return new ModelAndView(model, layout);
         }, new VelocityTemplateEngine());
@@ -52,8 +53,8 @@ public class App {
         post("/addAnimal", (request, response) -> {
             Map<String, Object> model = new HashMap<String, Object>();
 
-            Integer i = Integer.parseInt(request.queryParams("sightingid"));
-            Sightings sightings = Sightings.find(i);
+//            Integer i = Integer.parseInt(request.queryParams("sightingId"));
+            Sightings sightings = Sightings.find(Integer.parseInt(request.queryParams("sightingId")));
             String name = request.queryParams("name");
             Aminals newAnimal = new Aminals(name, sightings.getId());
             newAnimal.save();

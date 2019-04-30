@@ -3,16 +3,16 @@
       <table class="table">
         <thead>
           <tr>
-            <th scope="col"><h2 class="header">Stylist Name</h2></th>
-            <th scope="col"><h2 class="header">Update</h2></th>
-            <th scope="col"><h2 class="header">Delete</h2></th>
-            <th scope="col"><h2 class="header">Details...</h2></th>
+            <th scope="col"><h2 class="header sighting">Stylist Name</h2></th>
+            <th scope="col"><h2 class="header sighting">Update</h2></th>
+            <th scope="col"><h2 class="header sighting">Delete</h2></th>
+            <th scope="col"><h2 class="header sighting">Details...</h2></th>
           </tr>
         </thead>
         <tbody>
           #foreach($animals in $animals)
            <tr>
-            <td class="header">$animal.getName()</td>
+            <td class="header sighting">$animals.getName()</td>
             <td><a href="/stylistsdit/$stylists.getId()"><button type="submit" class="btn add btn-lg "><p class="add-btn">Edit</p></button></a></td>
             <td>
              <form action="/stylists/$stylists.getId()/delete" method="post">
