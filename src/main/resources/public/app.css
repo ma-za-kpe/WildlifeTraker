@@ -71,3 +71,13 @@ color: #C1DDE0;
    font-style: bold;
    font-size:30px;
  }
+
+.add {
+background-color: #78B5BC;
+}
+
+.add-btn{
+ color: #444444;
+ font-style: bold;
+    font-size:25px;
+}
